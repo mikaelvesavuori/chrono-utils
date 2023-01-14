@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { datesWithinMaximumRange } from '../src/functions/datesWithinMaximumRange';
+import { datesWithinMaximumRange } from '../src/datesWithinMaximumRange';
 
 test.serial('It should return "true" for two dates within an accepted time span', (t) => {
   const expected = true;

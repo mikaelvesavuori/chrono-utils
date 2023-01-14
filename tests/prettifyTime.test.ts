@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { prettifyTime } from '../src/functions/prettifyTime';
+import { prettifyTime } from '../src/prettifyTime';
 
 test.serial(
   'It should convert a numeric count of seconds into a colon-separated time format',

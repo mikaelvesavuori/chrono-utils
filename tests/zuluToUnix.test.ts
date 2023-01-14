@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { zuluToUnix } from '../src/functions/zuluToUnix';
+import { zuluToUnix } from '../src/zuluToUnix';
 
 test.serial(
   'It should convert a Date string to the number of seconds after the Unix epoch',

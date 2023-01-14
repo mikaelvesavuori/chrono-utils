@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { getMaxTimestampFromDate } from '../src/functions/getMaxTimestampFromDate';
+import { getMaxTimestampFromDate } from '../src/getMaxTimestampFromDate';
 
 test.serial('It should get the maximum historical/past timestamp at midnight 10 days ago', (t) => {
   const expected = '1672790400';

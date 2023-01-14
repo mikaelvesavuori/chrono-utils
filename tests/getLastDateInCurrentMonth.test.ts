@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { getLastDateInCurrentMonth } from '../src/functions/getLastDateInCurrentMonth';
+import { getLastDateInCurrentMonth } from '../src/getLastDateInCurrentMonth';
 
 const date = new Date();
 const month = date.getUTCMonth() + 1;

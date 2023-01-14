@@ -1,4 +1,4 @@
-import { MissingTimeError } from '../errors/errors';
+import { MissingTimeError } from './errors';
 
 /**
  * @description Converts a regular date to (JS) Unix timestamp.

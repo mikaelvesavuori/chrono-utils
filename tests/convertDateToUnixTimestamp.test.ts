@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { convertDateToUnixTimestamp } from '../src/functions/convertDateToUnixTimestamp';
+import { convertDateToUnixTimestamp } from '../src/convertDateToUnixTimestamp';
 
 test.serial('It should convert a GitHub-style date', (t) => {
   const expected = '1640944897000';

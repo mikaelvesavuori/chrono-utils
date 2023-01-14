@@ -1,7 +1,7 @@
 import test from 'ava';
 
-import { getCurrentDate } from '../src/functions/getCurrentDate';
-import { getDateYesterday } from '../src/functions/getDateYesterday';
+import { getCurrentDate } from '../src/getCurrentDate';
+import { getDateYesterday } from '../src/getDateYesterday';
 
 test.serial('It should get the date of the day before today in `YYYY-MM-DD` format', (t) => {
   const today = new Date(getCurrentDate());

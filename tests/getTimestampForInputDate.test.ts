@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { getTimestampForInputDate } from '../src/functions/getTimestampForInputDate';
+import { getTimestampForInputDate } from '../src/getTimestampForInputDate';
 
 test.serial('It should convert an YYYYMMDD date to a Unix timestamp', (t) => {
   const expected = '1672531200';

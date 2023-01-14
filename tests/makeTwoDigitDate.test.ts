@@ -1,7 +1,7 @@
 import test from 'ava';
-import { getCurrentDate } from '../src/functions/getCurrentDate';
+import { getCurrentDate } from '../src/getCurrentDate';
 
-import { makeTwoDigitDate } from '../src/functions/makeTwoDigitDate';
+import { makeTwoDigitDate } from '../src/makeTwoDigitDate';
 
 const date = new Date();
 const month = date.getUTCMonth() + 1;

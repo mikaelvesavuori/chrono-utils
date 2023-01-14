@@ -1,4 +1,4 @@
-import { InvalidDateUnitError } from '../errors/errors';
+import { InvalidDateUnitError } from './errors';
 
 /**
  * @description Add leading zero if date (day, month) is under 10.

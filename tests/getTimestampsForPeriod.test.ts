@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { getTimestampsForPeriod } from '../src/functions/getTimestampsForPeriod';
+import { getTimestampsForPeriod } from '../src/getTimestampsForPeriod';
 
 const getRandomInteger = () => Math.floor(Math.random() * 15) + 1;
 

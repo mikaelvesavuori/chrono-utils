@@ -1,4 +1,4 @@
-import { InvalidIsoDateConversionError } from '../errors/errors';
+import { InvalidIsoDateConversionError } from './errors';
 
 /**
  * @description Gets a corresponding Unix timestamp for a `YYYYMMDD` date.

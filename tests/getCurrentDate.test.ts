@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { getCurrentDate } from '../src/functions/getCurrentDate';
+import { getCurrentDate } from '../src/getCurrentDate';
 
 test.serial('It should get the current date', (t) => {
   const expected = new Date().toISOString().split('T')[0];

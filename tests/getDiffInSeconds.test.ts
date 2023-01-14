@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { getDiffInSeconds } from '../src/functions/getDiffInSeconds';
+import { getDiffInSeconds } from '../src/getDiffInSeconds';
 
 test.serial('Given inputs as strings, it should return positive numbers from them', (t) => {
   const expected = 11;

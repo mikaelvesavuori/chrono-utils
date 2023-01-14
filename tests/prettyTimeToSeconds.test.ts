@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { prettyTimeToSeconds } from '../src/functions/prettyTimeToSeconds';
+import { prettyTimeToSeconds } from '../src/prettyTimeToSeconds';
 
 test.serial('It should convert a pretty-formatted number in DD:HH:MM:SS format to seconds', (t) => {
   const expected = 34104;

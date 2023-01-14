@@ -1,6 +1,6 @@
 # `date-time-utils`
 
-**`date-time-utils` ollects a number of helpful date and time utilities for TypeScript/Javascript.**
+**`date-time-utils` collects a number of helpful date and time utilities for TypeScript/Javascript.**
 
 ![Build Status](https://github.com/mikaelvesavuori/date-time-utils/workflows/main/badge.svg)
 

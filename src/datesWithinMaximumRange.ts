@@ -1,6 +1,6 @@
 import { zuluToUnix } from './zuluToUnix';
 
-import { InvalidDateOrderError } from '../errors/errors';
+import { InvalidDateOrderError } from './errors';
 
 /**
  * @description Checks if two date objects are within a accepted maximum day range.
