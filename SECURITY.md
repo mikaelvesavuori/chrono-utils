@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-These versions of `date-time-utils` are currently being supported with security updates.
+These versions of `chrono-utils` are currently being supported with security updates.
 
 | Version | Supported |
 | ------- | --------- |

@@ -1,5 +1,5 @@
 {
-  "name": "date-time-utils",
+  "name": "chrono-utils",
   "description": "Collects a number of helpful date and time utilities for TypeScript/Javascript.",
   "version": "0.0.1",
   "author": "Mikael Vesavuori",
@@ -7,7 +7,7 @@
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikaelvesavuori/date-time-utils.git"
+    "url": "git+https://github.com/mikaelvesavuori/chrono-utils.git"
   },
   "keywords": [
     "date",
@@ -15,9 +15,9 @@
     "utils"
   ],
   "bugs": {
-    "url": "https://github.com/mikaelvesavuori/date-time-utils/issues"
+    "url": "https://github.com/mikaelvesavuori/chrono-utils/issues"
   },
-  "homepage": "https://github.com/mikaelvesavuori/date-time-utils#readme",
+  "homepage": "https://github.com/mikaelvesavuori/chrono-utils#readme",
   "files": [
     "/lib",
     "!/lib/**/*.map",
