@@ -4,7 +4,7 @@
 
 ![Build Status](https://github.com/mikaelvesavuori/chrono-utils/workflows/main/badge.svg)
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mikaelvesavuori_chrono-utils&metric=alert_status)](https://sonarcloud.io/dashboard?id=mikaelvesavuori_chrono-utils)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/quality_gate?project=mikaelvesavuori_date-time-utils)](https://sonarcloud.io/summary/new_code?id=mikaelvesavuori_date-time-utils)
 
 [![CodeScene Code Health](https://codescene.io/projects/33643/status-badges/code-health)](https://codescene.io/projects/33643)
 
@@ -163,8 +163,6 @@ makeTwoDigitDate(new Date('2022-07-05'), 'month'); // '07'
 ### `prettifyTime`
 
 Returns a prettified time format (`DD:HH:MM:SS`) from a count of seconds.
-
-All fields will be double-digit, but it is possible that double-digit `DD` will in fact be three-digit `DDD` if the day count is huge (i.e. over 99).
 
 ```ts
 import { prettifyTime } from 'chrono-utils';
