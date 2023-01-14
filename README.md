@@ -1,8 +1,22 @@
-# date-time-utils
+# `date-time-utils`
 
-Collects a number of helpful date and time utilities for TypeScript/Javascript.
+**`date-time-utils` ollects a number of helpful date and time utilities for TypeScript/Javascript.**
 
-They are particularly useful when building applications that need to use Unix timestamps and convert between human-readable and query-optimized (Unix) times.
+![Build Status](https://github.com/mikaelvesavuori/date-time-utils/workflows/main/badge.svg)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mikaelvesavuori_date-time-utils&metric=alert_status)](https://sonarcloud.io/dashboard?id=mikaelvesavuori_date-time-utils)
+
+[![CodeScene Code Health](https://codescene.io/projects/33643/status-badges/code-health)](https://codescene.io/projects/33643)
+
+[![CodeScene System Mastery](https://codescene.io/projects/33643/status-badges/system-mastery)](https://codescene.io/projects/33643)
+
+[![codecov](https://codecov.io/gh/mikaelvesavuori/date-time-utils/branch/main/graph/badge.svg?token=S7D3RM9TO7)](https://codecov.io/gh/mikaelvesavuori/date-time-utils)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/007afe3ec1ee3fe7102c/maintainability)](https://codeclimate.com/github/mikaelvesavuori/date-time-utils/maintainability)
+
+---
+
+These utility functions are particularly useful when building applications that need to use Unix timestamps and convert between human-readable and query-optimized (Unix) times.
 
 ## Functions
 
