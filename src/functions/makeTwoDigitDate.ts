@@ -7,6 +7,8 @@ import { InvalidDateUnitError } from '../errors/errors';
  * @example makeTwoDigitDate(11, 'month');
  * @example makeTwoDigitDate(new Date('2022-12-05'), 'day');
  * @example makeTwoDigitDate(new Date('2022-07-05'), 'month');
+ *
+ * @returns `01`
  */
 export function makeTwoDigitDate(date: Date | number, unit: 'day' | 'month'): string {
   const value = (() => {

@@ -1,7 +1,9 @@
 /**
  * @description Return the last date in the current month in `YYYY-MM-DD` format.
  *
- * @example `2022-12-31`
+ * @example getLastDateInCurrentMonth();
+ *
+ * @returns `2022-12-31`
  */
 export function getLastDateInCurrentMonth(): string {
   const date = new Date();

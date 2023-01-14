@@ -13,8 +13,8 @@ Converts a regular date to (JS) Unix timestamp.
 ```ts
 import { convertDateToUnixTimestamp } from 'date-time-utils';
 
-const example1 = convertDateToUnixTimestamp('2021-12-31T10:01:37Z'); // '1640944897000'
-const example2 = convertDateToUnixTimestamp('2022-01-10T08:42:43+00:00'); // '1641804163000'
+convertDateToUnixTimestamp('2021-12-31T10:01:37Z'); // '1640944897000'
+convertDateToUnixTimestamp('2022-01-10T08:42:43+00:00'); // '1641804163000'
 ```
 
 ### `datesWithinMaximumRange`

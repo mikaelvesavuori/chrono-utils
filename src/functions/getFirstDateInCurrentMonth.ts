@@ -1,7 +1,9 @@
 /**
  * @description Returns the first date in the current month in `YYYY-MM-DD` format.
  *
- * @example `2022-12-01`
+ * @example getFirstDateInCurrentMonth();
+ *
+ * @returns `2022-12-01`
  */
 export function getFirstDateInCurrentMonth(): string {
   const date = new Date();

@@ -5,6 +5,9 @@ import { getCurrentDate } from './getCurrentDate';
  *
  * The `noDashes` option will strip any dashes between days, months, etc.
  *
+ * @example getDateYesterday();
+ * @example getDateYesterday(true);
+ *
  * @returns `2022-11-20`
  * @returns `20221120`
  */

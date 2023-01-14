@@ -4,6 +4,8 @@
  * be three-digit `DDD` if the day count is huge (i.e. over 99).
  *
  * @example prettifyTime(60);
+ *
+ * @returns `00:00:01:00`
  */
 export function prettifyTime(timeInSeconds: number): string {
   let days = Math.floor(timeInSeconds / 86400).toString();

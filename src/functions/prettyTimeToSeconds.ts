@@ -3,6 +3,8 @@
  * to represent the same value.
  *
  * @example prettyTimeToSeconds('00:09:28:24');
+ *
+ * @returns `34104`
  */
 export function prettyTimeToSeconds(time: string) {
   if (!time || time === '00:00:00:00') return 0;

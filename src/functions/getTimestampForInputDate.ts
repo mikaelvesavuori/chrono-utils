@@ -6,7 +6,11 @@ import { InvalidIsoDateConversionError } from '../errors/errors';
  * @param date Date in YYYYMMDD format
  * @param offsetInHours Optional timezone offset in hours, using the format `0` (UTC; default), `-4` (behind UTC), or `7` (before UTC)
  *
- * @example `1672531200`
+ * @example getTimestampForInputDate('20230101');
+ * @example getTimestampForInputDate('20230101', 4);
+ * @example getTimestampForInputDate('20230101', -11);
+ *
+ * @returns `1672531200`
  */
 export function getTimestampForInputDate(
   date: string,
@@ -21,7 +25,8 @@ export function getTimestampForInputDate(
 
 /**
  * @description Converts a `YYYYMMDD` date string to ISO format.
- * @example `20230101`
+ *
+ * @returns `20230101`
  */
 function convertToIsoDate(input: string) {
   if (!input || input.length !== 8) throw new InvalidIsoDateConversionError();
@@ -39,7 +44,7 @@ function convertToIsoDate(input: string) {
  * @param formattedDate Date in the ISO format of `2023-01-01`
  * @param offsetInHours Optional timezone offset in hours, using the format `0` (UTC; default), `-4` (behind UTC), or `7` (before UTC)
  *
- * @example `1672531200`
+ * @returns `1672531200`
  */
 function getTimestampForISODate(
   formattedDate: string,
@@ -54,7 +59,8 @@ function getTimestampForISODate(
 
 /**
  * @description Returns a long timezone-converted date string from a formatted date such as `2023-01-01`.
- * @example `2023-01-01T00:00:00.000+05:00`
+ *
+ * @returns `2023-01-01T00:00:00.000+05:00`
  */
 function createTimezoneConvertedDateString(
   formattedDate: string,

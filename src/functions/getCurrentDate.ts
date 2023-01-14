@@ -5,6 +5,9 @@ import { makeTwoDigitDate } from './makeTwoDigitDate';
  *
  * The `noDashes` option will strip any dashes between days, months, etc.
  *
+ * @example getCurrentDate();
+ * @example getCurrentDate(true);
+ *
  * @returns `2022-11-20`
  * @returns `20221120`
  */

@@ -7,6 +7,8 @@ import { getTimestampForInputDate } from './getTimestampForInputDate';
  * @example getMaxTimestampFromDate(10, 0);
  * @example getMaxTimestampFromDate(6, 6);
  * @example getMaxTimestampFromDate(4, -2);
+ *
+ * @returns `1672790400`
  */
 export function getMaxTimestampFromDate(maxDateRange: number, offset: number) {
   const date = new Date(getCurrentDate());

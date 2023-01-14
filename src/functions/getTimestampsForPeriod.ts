@@ -11,6 +11,8 @@ import { getTimestampForInputDate } from './getTimestampForInputDate';
  * @example getTimestampsForPeriod(1);
  * @example getTimestampsForPeriod(5, -3);
  * @example getTimestampsForPeriod(14, 7);
+ *
+ * @returns `{ "from": "1673568000", "to": "1673654399" }`
  */
 export function getTimestampsForPeriod(lastNumDays: number, offsetInHours = 0) {
   const toTime = getTimestampForInputDate(getDateYesterday(true), offsetInHours, true);
