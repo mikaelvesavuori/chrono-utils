@@ -18,7 +18,26 @@
 
 These utility functions are particularly useful when building applications that need to use Unix timestamps and convert between human-readable and query-optimized (Unix) times.
 
-## Functions
+## Usage
+
+### Installation
+
+Run `npm install chrono-utils`. Exchange `npm` with your chosen package manager if needed.
+
+### Basic importing and usage
+
+```typescript
+// ES5 format
+const { convertDateToUnixTimestamp } = require('chrono-utils');
+// ES6 format
+import { convertDateToUnixTimestamp } from 'chrono-utils';
+
+convertDateToUnixTimestamp('2021-12-31T10:01:37Z');
+```
+
+## Overview of functions
+
+The below explains each of the functions in `chrono-utils` and shows examples of their output.
 
 ### `convertDateToUnixTimestamp`
 

@@ -1,11 +1,25 @@
 import test from 'ava';
 
+import { getCurrentDate } from '../src/getCurrentDate';
 import { getMaxTimestampFromDate } from '../src/getMaxTimestampFromDate';
 
-test.serial('It should get the maximum historical/past timestamp at midnight 10 days ago', (t) => {
-  const expected = '1672790400';
+const calculateExpectedTimestamp = (days: number, offset = 0) => {
+  const date = new Date(getCurrentDate());
+  date.setUTCDate(date.getUTCDate() - days);
 
-  const response = getMaxTimestampFromDate(10, 0);
+  let time = date.getTime() / 1000; // Convert from ms to seconds
+  const secondsInHour = 3600;
+  const diff = secondsInHour * offset;
+  if (offset) time += diff; // If negative, adds negative number, so this works as intended but may look wrong at first sight!
+
+  return `${time}`;
+};
+
+test.serial('It should get the maximum historical/past timestamp at midnight 10 days ago', (t) => {
+  const days = 10;
+  const expected = calculateExpectedTimestamp(days);
+
+  const response = getMaxTimestampFromDate(days, 0);
 
   t.deepEqual(response, expected);
 });
@@ -13,9 +27,11 @@ test.serial('It should get the maximum historical/past timestamp at midnight 10 
 test.serial(
   'It should get the maximum historical/past timestamp at midnight 6 days ago using a positive offset',
   (t) => {
-    const expected = '1673157600';
+    const days = 6;
+    const offset = 6;
+    const expected = calculateExpectedTimestamp(days, offset);
 
-    const response = getMaxTimestampFromDate(6, 6);
+    const response = getMaxTimestampFromDate(days, offset);
 
     t.deepEqual(response, expected);
   }
@@ -24,9 +40,11 @@ test.serial(
 test.serial(
   'It should get the maximum historical/past timestamp at midnight 4 days ago using a negative offset',
   (t) => {
-    const expected = '1673301600';
+    const days = 4;
+    const offset = -2;
+    const expected = calculateExpectedTimestamp(days, offset);
 
-    const response = getMaxTimestampFromDate(4, -2);
+    const response = getMaxTimestampFromDate(days, offset);
 
     t.deepEqual(response, expected);
   }
