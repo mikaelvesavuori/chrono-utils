@@ -69,7 +69,7 @@ Takes a timestamp and returns the current date in `YYYYMMDD` format.
 ```ts
 import { getDateFromTimestamp } from 'chrono-utils';
 
-getDateFromTimestamp('1664928000'); // "20221005"
+getDateFromTimestamp('1664928000'); // '20221005'
 ```
 
 ### `getCurrentDate`
