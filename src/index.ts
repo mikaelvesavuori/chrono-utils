@@ -1,6 +1,7 @@
 export * from './convertDateToUnixTimestamp';
 export * from './datesWithinMaximumRange';
 export * from './getCurrentDate';
+export * from './getDateFromTimestamp';
 export * from './getDateYesterday';
 export * from './getDiffInSeconds';
 export * from './getFirstDateInCurrentMonth';
