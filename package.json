@@ -1,7 +1,7 @@
 {
   "name": "chrono-utils",
   "description": "Collects a number of helpful date and time utilities for TypeScript/Javascript.",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "author": "Mikael Vesavuori",
   "license": "MIT",
   "main": "./lib/index.js",

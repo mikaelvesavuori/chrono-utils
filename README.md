@@ -62,6 +62,16 @@ const endDate = new Date('2022-12-01');
 const response = datesWithinMaximumRange(startDate, endDate); // true
 ```
 
+### `getDateFromTimestamp`
+
+Takes a timestamp and returns the current date in `YYYYMMDD` format.
+
+```ts
+import { getDateFromTimestamp } from 'chrono-utils';
+
+getDateFromTimestamp('1664928000'); // "20221005"
+```
+
 ### `getCurrentDate`
 
 Returns the current date in `YYYY-MM-DD` format.
