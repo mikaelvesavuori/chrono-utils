@@ -10,8 +10,6 @@
 
 [![codecov](https://codecov.io/gh/mikaelvesavuori/chrono-utils/branch/main/graph/badge.svg?token=S7D3RM9TO7)](https://codecov.io/gh/mikaelvesavuori/chrono-utils)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/007afe3ec1ee3fe7102c/maintainability)](https://codeclimate.com/github/mikaelvesavuori/chrono-utils/maintainability)
-
 ---
 
 These utility functions are particularly useful when building applications that need to use Unix timestamps and convert between human-readable and query-optimized (Unix) times.
