@@ -4,8 +4,6 @@
 
 ![Build Status](https://github.com/mikaelvesavuori/chrono-utils/workflows/main/badge.svg)
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/quality_gate?project=mikaelvesavuori_date-time-utils)](https://sonarcloud.io/summary/new_code?id=mikaelvesavuori_date-time-utils)
-
 [![CodeScene Code Health](https://codescene.io/projects/33643/status-badges/code-health)](https://codescene.io/projects/33643)
 
 [![CodeScene System Mastery](https://codescene.io/projects/33643/status-badges/system-mastery)](https://codescene.io/projects/33643)
@@ -174,6 +172,20 @@ import { getTimestampsForPeriod } from 'chrono-utils';
 getTimestampsForPeriod(1); // 1 day, zero offset - { "from": "1673568000", "to": "1673654399" }
 getTimestampsForPeriod(5, -3); // 5 days, -3 hours offset - { "from": "1673211600", "to": "1673643599" }
 getTimestampsForPeriod(14, 7); // 14 days, +7 hours offset - { "from": "1672470000", "to": "1673679599" }
+```
+
+### `isUnitTimestamp`
+
+Check if the input matching a 10 or 13 digit Unix timestamp.
+
+```ts
+import { isUnixTimestamp } from 'chrono-utils';
+
+isUnixTimestamp(1234567890); // true
+isUnixTimestamp('1234567890123'); // true
+isUnixTimestamp('123456789'); // false
+isUnixTimestamp('12345678901234'); // false
+isUnixTimestamp('2024-06-06'); // false
 ```
 
 ### `makeTwoDigitDate`

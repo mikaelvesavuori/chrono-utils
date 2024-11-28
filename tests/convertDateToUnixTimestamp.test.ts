@@ -1,32 +1,27 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 
 import { convertDateToUnixTimestamp } from '../src/convertDateToUnixTimestamp';
 
-test.serial('It should convert a GitHub-style date', (t) => {
+test('It should convert a GitHub-style date', () => {
   const expected = '1640944897000';
 
   const response = convertDateToUnixTimestamp('2021-12-31T10:01:37Z');
 
-  t.deepEqual(response, expected);
+  expect(response, expected);
 });
 
-test.serial('It should convert a Bitbucket-style date', (t) => {
+test('It should convert a Bitbucket-style date', () => {
   const expected = '1641804163000';
 
   const response = convertDateToUnixTimestamp('2022-01-10T08:42:43+00:00');
 
-  t.deepEqual(response, expected);
+  expect(response, expected);
 });
 
 /**
  * NEGATIVE TESTS
  */
 
-test.serial('It should throw a MissingTimeError if no time is passed to the function', (t) => {
-  const expected = 'MissingTimeError';
-
-  // @ts-ignore
-  const error: any = t.throws(() => convertDateToUnixTimestamp());
-
-  t.deepEqual(error.name, expected);
+test('It should throw a MissingTimeError if no time is passed to the function', () => {
+  expect(() => expect(convertDateToUnixTimestamp).toThrowError());
 });

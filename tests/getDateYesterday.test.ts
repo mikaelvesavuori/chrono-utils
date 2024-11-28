@@ -1,9 +1,9 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 
 import { getCurrentDate } from '../src/getCurrentDate';
 import { getDateYesterday } from '../src/getDateYesterday';
 
-test.serial('It should get the date of the day before today in `YYYY-MM-DD` format', (t) => {
+test('It should get the date of the day before today in `YYYY-MM-DD` format', () => {
   const today = new Date(getCurrentDate());
   const yesterday = new Date(today);
   yesterday.setDate(today.getUTCDate() - 1);
@@ -11,10 +11,10 @@ test.serial('It should get the date of the day before today in `YYYY-MM-DD` form
 
   const response = getDateYesterday();
 
-  t.deepEqual(response, expected);
+  expect(response, expected);
 });
 
-test.serial('It should get the date of the day before today in `YYYYMMDD` format', (t) => {
+test('It should get the date of the day before today in `YYYYMMDD` format', () => {
   const today = new Date(getCurrentDate());
   const yesterday = new Date(today);
   yesterday.setDate(today.getUTCDate() - 1);
@@ -22,5 +22,5 @@ test.serial('It should get the date of the day before today in `YYYYMMDD` format
 
   const response = getDateYesterday(true);
 
-  t.deepEqual(response, expected);
+  expect(response, expected);
 });

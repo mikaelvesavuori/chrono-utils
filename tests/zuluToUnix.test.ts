@@ -1,20 +1,17 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 
 import { zuluToUnix } from '../src/zuluToUnix';
 
-test.serial(
-  'It should convert a Date string to the number of seconds after the Unix epoch',
-  (t) => {
-    const expected = 1673710838227;
+test('It should convert a Date string to the number of seconds after the Unix epoch', () => {
+  const expected = 1673710838227;
 
-    const response = zuluToUnix('2023-01-14T15:40:38.227Z');
+  const response = zuluToUnix('2023-01-14T15:40:38.227Z');
 
-    t.deepEqual(response, expected);
-  }
-);
+  expect(response).toBe(expected);
+});
 
-test.serial('It should convert an ISO 8601/RFC 3339 time format to a Unix timestamp', (t) => {
+test('It should convert an ISO 8601/RFC 3339 time format to a Unix timestamp', () => {
   const expected = 1669027317000;
   const response = zuluToUnix('2022-11-21T10:41:57Z');
-  t.deepEqual(response, expected);
+  expect(response).toBe(expected);
 });

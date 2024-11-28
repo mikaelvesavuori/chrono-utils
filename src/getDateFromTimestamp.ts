@@ -6,6 +6,10 @@
  * @returns `20221005`
  */
 export function getDateFromTimestamp(timestamp: string): string {
-  if (timestamp.length === 10) timestamp = `${timestamp}000`;
-  return new Date(parseInt(timestamp)).toISOString().split('T')[0].replaceAll('-', '');
+  const value = timestamp.length === 10 ? `${timestamp}000` : timestamp;
+
+  return new Date(Number.parseInt(value))
+    .toISOString()
+    .split('T')[0]
+    .replaceAll('-', '');
 }

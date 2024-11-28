@@ -15,9 +15,13 @@ import { getTimestampForInputDate } from './getTimestampForInputDate';
  * @returns `{ "from": "1673568000", "to": "1673654399" }`
  */
 export function getTimestampsForPeriod(lastNumDays: number, offsetInHours = 0) {
-  const toTime = getTimestampForInputDate(getDateYesterday(true), offsetInHours, true);
+  const toTime = getTimestampForInputDate(
+    getDateYesterday(true),
+    offsetInHours,
+    true
+  );
   const fromTime = new Date(
-    parseInt(`${toTime}999`) - getMillisecondsForDays(lastNumDays) + 1
+    Number.parseInt(`${toTime}999`) - getMillisecondsForDays(lastNumDays) + 1
   ).getTime();
 
   return {

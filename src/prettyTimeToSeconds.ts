@@ -11,6 +11,9 @@ export function prettyTimeToSeconds(time: string) {
 
   const [days, hours, minutes, seconds] = time.split(':');
   return (
-    parseInt(days) * 86400 + parseInt(hours) * 3600 + parseInt(minutes) * 60 + parseInt(seconds)
+    Number.parseInt(days) * 86400 +
+    Number.parseInt(hours) * 3600 +
+    Number.parseInt(minutes) * 60 +
+    Number.parseInt(seconds)
   );
 }

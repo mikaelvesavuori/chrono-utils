@@ -18,7 +18,11 @@ export function getTimestampForInputDate(
   lastPossibleTime = false
 ) {
   const formatted = convertToIsoDate(date);
-  const timestamp = getTimestampForISODate(formatted, offsetInHours, lastPossibleTime);
+  const timestamp = getTimestampForISODate(
+    formatted,
+    offsetInHours,
+    lastPossibleTime
+  );
 
   return `${timestamp}`;
 }
@@ -52,7 +56,11 @@ function getTimestampForISODate(
   lastPossibleTime = false
 ) {
   const date = new Date(
-    createTimezoneConvertedDateString(formattedDate, offsetInHours, lastPossibleTime)
+    createTimezoneConvertedDateString(
+      formattedDate,
+      offsetInHours,
+      lastPossibleTime
+    )
   );
   return Math.floor(date.getTime() / 1000);
 }

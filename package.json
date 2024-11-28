@@ -1,10 +1,18 @@
 {
   "name": "chrono-utils",
   "description": "Collects a number of helpful date and time utilities for TypeScript/Javascript.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Mikael Vesavuori",
   "license": "MIT",
-  "main": "./lib/index.js",
+  "type": "module",
+  "main": "lib/index.cjs",
+  "module": "lib/index.js",
+  "exports": {
+    ".": {
+      "require": "./lib/index.cjs",
+      "import": "./lib/index.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mikaelvesavuori/chrono-utils.git"
@@ -24,47 +32,26 @@
     "!/tests"
   ],
   "scripts": {
-    "start": "npx ts-node src/index.ts",
-    "test": "npx c8 -reporter=lcov ava",
-    "test:types": "npx type-coverage --at-least 100 --strict --ignore-files \"tests/**/*.ts\" --ignore-files \"*.ts\" --ignore-files \"src/application/errors/*.ts\" --ignore-files \"testdata/*.ts\"",
-    "build": "npm run clean && npx tsc --project tsconfig.build.json",
-    "clean": "rm -rf lib",
+    "test": "npx vitest run --coverage",
+    "test:watch": "npx vitest",
+    "build": "npm run clean && tsup src --format esm,cjs --dts && mv dist lib",
+    "clean": "rm -rf lib && rm -rf dist",
+    "lint": "npx @biomejs/biome check --write ./src && npx @biomejs/biome check --write ./tests",
     "package": "npm pack",
     "prepublishOnly": "npm run build",
-    "prepare": "husky install",
+    "prepare": "husky",
     "docs": "npm run docs:clean && npm run docs:typedoc",
     "docs:clean": "rm -rf docs",
     "docs:typedoc": "npx typedoc --entryPoints src --entryPointStrategy expand --exclude '**/*+(test).ts' --externalPattern 'node_modules/**/*' --excludeExternals --out docs/"
   },
   "devDependencies": {
-    "@ava/typescript": "3",
-    "@types/node": "18",
-    "@typescript-eslint/eslint-plugin": "5",
-    "@typescript-eslint/parser": "5",
-    "ava": "5",
-    "c8": "7",
-    "eslint": "8",
-    "eslint-config-prettier": "8",
-    "eslint-plugin-prettier": "4",
-    "husky": "8",
-    "prettier": "2",
-    "ts-node": "10",
-    "type-coverage": "2",
-    "typedoc": "^0.23.24",
-    "typescript": "4"
-  },
-  "ava": {
-    "typescript": {
-      "rewritePaths": {
-        "src/": "lib/"
-      },
-      "compile": false
-    },
-    "files": [
-      "tests/*.ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ]
+    "@biomejs/biome": "1",
+    "@types/node": "22",
+    "@vitest/coverage-v8": "2",
+    "husky": "9",
+    "tsup": "8",
+    "typescript": "5",
+    "typedoc": "0",
+    "vitest": "2"
   }
 }

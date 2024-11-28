@@ -10,10 +10,15 @@ import { InvalidDateUnitError } from './errors';
  *
  * @returns `01`
  */
-export function makeTwoDigitDate(date: Date | number, unit: 'day' | 'month'): string {
+export function makeTwoDigitDate(
+  date: Date | number,
+  unit: 'day' | 'month'
+): string {
   const value = (() => {
-    if (unit === 'day') return typeof date === 'number' ? `${date}` : `${date.getUTCDate()}`;
-    if (unit === 'month') return typeof date === 'number' ? `${date}` : `${date.getUTCMonth() + 1}`;
+    if (unit === 'day')
+      return typeof date === 'number' ? `${date}` : `${date.getUTCDate()}`;
+    if (unit === 'month')
+      return typeof date === 'number' ? `${date}` : `${date.getUTCMonth() + 1}`;
     throw new InvalidDateUnitError();
   })();
 

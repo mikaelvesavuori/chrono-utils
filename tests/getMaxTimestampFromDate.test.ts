@@ -1,4 +1,4 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 
 import { getCurrentDate } from '../src/getCurrentDate';
 import { getMaxTimestampFromDate } from '../src/getMaxTimestampFromDate';
@@ -15,37 +15,31 @@ const calculateExpectedTimestamp = (days: number, offset = 0) => {
   return `${time}`;
 };
 
-test.serial('It should get the maximum historical/past timestamp at midnight 10 days ago', (t) => {
+test('It should get the maximum historical/past timestamp at midnight 10 days ago', () => {
   const days = 10;
   const expected = calculateExpectedTimestamp(days);
 
   const response = getMaxTimestampFromDate(days, 0);
 
-  t.deepEqual(response, expected);
+  expect(response, expected);
 });
 
-test.serial(
-  'It should get the maximum historical/past timestamp at midnight 6 days ago using a positive offset',
-  (t) => {
-    const days = 6;
-    const offset = 6;
-    const expected = calculateExpectedTimestamp(days, offset);
+test('It should get the maximum historical/past timestamp at midnight 6 days ago using a positive offset', () => {
+  const days = 6;
+  const offset = 6;
+  const expected = calculateExpectedTimestamp(days, offset);
 
-    const response = getMaxTimestampFromDate(days, offset);
+  const response = getMaxTimestampFromDate(days, offset);
 
-    t.deepEqual(response, expected);
-  }
-);
+  expect(response, expected);
+});
 
-test.serial(
-  'It should get the maximum historical/past timestamp at midnight 4 days ago using a negative offset',
-  (t) => {
-    const days = 4;
-    const offset = -2;
-    const expected = calculateExpectedTimestamp(days, offset);
+test('It should get the maximum historical/past timestamp at midnight 4 days ago using a negative offset', () => {
+  const days = 4;
+  const offset = -2;
+  const expected = calculateExpectedTimestamp(days, offset);
 
-    const response = getMaxTimestampFromDate(days, offset);
+  const response = getMaxTimestampFromDate(days, offset);
 
-    t.deepEqual(response, expected);
-  }
-);
+  expect(response, expected);
+});

@@ -1,36 +1,36 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 
 import { getDiffInSeconds } from '../src/getDiffInSeconds';
 
-test.serial('Given inputs as strings, it should return positive numbers from them', (t) => {
+test('Given inputs as strings, it should return positive numbers from them', () => {
   const expected = 11;
 
   const response = getDiffInSeconds('12345', '23456');
 
-  t.deepEqual(response, expected);
+  expect(response).toBe(expected);
 });
 
-test.serial('Given inputs as strings, it should return negative numbers from them', (t) => {
+test('Given inputs as strings, it should return negative numbers from them', () => {
   const expected = -12;
 
   const response = getDiffInSeconds('23456', '12345');
 
-  t.deepEqual(response, expected);
+  expect(response).toBe(expected);
 });
 
-test.serial('Given inputs as numbers, it should return negative numbers from them', (t) => {
+test('Given inputs as numbers, it should return negative numbers from them', () => {
   const expected = -12;
 
   // @ts-ignore
   const response = getDiffInSeconds(23456, 12345);
 
-  t.deepEqual(response, expected);
+  expect(response).toBe(expected);
 });
 
-test.serial('It should get the difference in seconds between two timestamps', (t) => {
+test('It should get the difference in seconds between two timestamps', () => {
   const expected = 100;
 
   const response = getDiffInSeconds('1670873500000', '1670873600000');
 
-  t.deepEqual(response, expected);
+  expect(response).toBe(expected);
 });

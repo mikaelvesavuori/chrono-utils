@@ -14,7 +14,11 @@ import { InvalidDateOrderError } from './errors';
  *
  * @returns `true`
  */
-export function datesWithinMaximumRange(startDate: Date, endDate: Date, maxDays = 365) {
+export function datesWithinMaximumRange(
+  startDate: Date,
+  endDate: Date,
+  maxDays = 365
+) {
   const start = zuluToUnix(startDate.toISOString());
   const end = zuluToUnix(endDate.toISOString());
   if (start > end) throw new InvalidDateOrderError();

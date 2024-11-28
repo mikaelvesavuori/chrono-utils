@@ -10,6 +10,7 @@ export * from './getMaxTimestampFromDate';
 export * from './getMillisecondsForDays';
 export * from './getTimestampForInputDate';
 export * from './getTimestampsForPeriod';
+export * from './isUnixTimestamp';
 export * from './makeTwoDigitDate';
 export * from './prettifyTime';
 export * from './prettyTimeToSeconds';

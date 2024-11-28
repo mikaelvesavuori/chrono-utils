@@ -1,19 +1,19 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 
 import { getCurrentDate } from '../src/getCurrentDate';
 
-test.serial('It should get the current date', (t) => {
+test('It should get the current date', () => {
   const expected = new Date().toISOString().split('T')[0];
 
   const response = getCurrentDate();
 
-  t.deepEqual(response, expected);
+  expect(response, expected);
 });
 
-test.serial('It should get the current date without dashes', (t) => {
+test('It should get the current date without dashes', () => {
   const expected = new Date().toISOString().split('T')[0].replaceAll('-', '');
 
   const response = getCurrentDate(true);
 
-  t.deepEqual(response, expected);
+  expect(response, expected);
 });

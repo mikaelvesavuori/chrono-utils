@@ -1,7 +1,4 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 npx tsc
-npm run build
-npm run test:types
 npm test
+npm run lint
+git add .

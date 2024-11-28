@@ -13,5 +13,8 @@ import { getTimestampForInputDate } from './getTimestampForInputDate';
 export function getMaxTimestampFromDate(maxDateRange: number, offset: number) {
   const date = new Date(getCurrentDate());
   date.setUTCDate(date.getUTCDate() - maxDateRange);
-  return getTimestampForInputDate(date.toISOString().substring(0, 10).replaceAll('-', ''), offset);
+  return getTimestampForInputDate(
+    date.toISOString().substring(0, 10).replaceAll('-', ''),
+    offset
+  );
 }

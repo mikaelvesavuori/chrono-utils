@@ -5,4 +5,5 @@
  *
  * @returns `259200000`
  */
-export const getMillisecondsForDays = (days: number) => 24 * 60 * 60 * 1000 * days; // hours x minutes x seconds
+export const getMillisecondsForDays = (days: number) =>
+  24 * 60 * 60 * 1000 * days; // hours x minutes x seconds

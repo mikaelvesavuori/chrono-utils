@@ -5,5 +5,10 @@
  *
  * @returns `100`
  */
-export const getDiffInSeconds = (earlierTime: string, laterTime: string): number =>
-  Math.floor((parseInt(laterTime) - parseInt(earlierTime)) / 1000);
+export const getDiffInSeconds = (
+  earlierTime: string,
+  laterTime: string
+): number =>
+  Math.floor(
+    (Number.parseInt(laterTime) - Number.parseInt(earlierTime)) / 1000
+  );

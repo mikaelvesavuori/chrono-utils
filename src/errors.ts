@@ -5,11 +5,8 @@ export class InvalidDateOrderError extends Error {
   constructor() {
     super();
     this.name = 'InvalidDateOrderError';
-    const message = `Start date is before end date!`;
-    this.message = message;
-    this.cause = {
-      statusCode: 400
-    };
+    this.message = 'Start date is before end date!';
+    this.cause = { statusCode: 400 };
   }
 }
 
@@ -20,11 +17,8 @@ export class InvalidDateUnitError extends Error {
   constructor() {
     super();
     this.name = 'InvalidDateUnitError';
-    const message = `Incorrect date unit, must be 'day' or 'month'!`;
-    this.message = message;
-    this.cause = {
-      statusCode: 400
-    };
+    this.message = `Incorrect date unit, must be 'day' or 'month'!`;
+    this.cause = { statusCode: 400 };
   }
 }
 
@@ -35,13 +29,9 @@ export class InvalidIsoDateConversionError extends Error {
   constructor() {
     super();
     this.name = 'InvalidIsoDateConversionError';
-    const message =
+    this.message =
       'Either missing date to convert to ISO format or the length is not 8 characters long (YYYYMMDD format)!';
-    this.message = message;
-    //@ts-ignore
-    this.cause = {
-      statusCode: 400
-    };
+    this.cause = { statusCode: 400 };
   }
 }
 
@@ -52,11 +42,7 @@ export class MissingTimeError extends Error {
   constructor() {
     super();
     this.name = 'MissingTimeError';
-    const message = 'Missing time in "convertDateToUnixTimestamp"!';
-    this.message = message;
-    //@ts-ignore
-    this.cause = {
-      statusCode: 500
-    };
+    this.message = 'Missing time in "convertDateToUnixTimestamp"!';
+    this.cause = { statusCode: 500 };
   }
 }
